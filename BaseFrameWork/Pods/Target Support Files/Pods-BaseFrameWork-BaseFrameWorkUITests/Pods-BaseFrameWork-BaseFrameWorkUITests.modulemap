@@ -1,0 +1,6 @@
+framework module Pods_BaseFrameWork_BaseFrameWorkUITests {
+  umbrella header "Pods-BaseFrameWork-BaseFrameWorkUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
