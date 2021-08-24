@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class HomeTableViewController: UITableViewController {
     
@@ -17,23 +18,17 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellID)
         
-        AF.request("http://localhost:8080/students.json").responseJSON { response in
-            switch response.result {
-                case .success(let result):
-                    debugPrint(result)
-                    guard let resJson = result as? [String:Any] else {
-                        return
-                    }
-                    let resultJson = resJson["result"] as? [String:Any]
-                    debugPrint(resultJson!)
-                case .failure(let err):
-                    debugPrint(err)
-            }
-            
-
+        let requestBean = HomeRequestBean()
+        requestBean.page = 1
+        requestBean.count = 0
+    
+        let json =  requestBean.object2JSON()
+        NetworkingTool.shareInstance.request(url: "/baseFramework/students.json", method: .get, parmas: json.dictionaryValue) { result in
+            debugPrint(result)
+        } failedCallBack: { error in
+//            debugPrint(error)
         }
-        
-        
+   
     }
 
     // MARK: - Table view data source

@@ -7,11 +7,12 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class NetworkingTool: NSObject {
 
     //网络请求路径
-    let baseUrlPath = ""
+    let baseUrlPath = "http://localhost:8080"
     let basePicPath = ""
     let baseH5Path = ""
     //成功失败回调
@@ -74,7 +75,7 @@ class NetworkingTool: NSObject {
     ///   - params:               [String: Any]:请求参数
     ///   - successCallBack:      NetSuccessCallBack:成功回调
     ///   - failedCallBack:       NetFailCallBack:失败回调
-    public func request(url: String, method:NetRequestMethod, parmas:[String: Any],
+    public func request(url: String, method:HTTPMethod, parmas:[String: Any],
                         successCallBack:@escaping NetSuccessCallBack, failedCallBack:@escaping NetFailCallBack) {
         let encodingUrl = encodingURL(path: url)
         let absolute = absoluteUrlWithPath(path: encodingUrl)
@@ -83,11 +84,29 @@ class NetworkingTool: NSObject {
             return
         }
         
-        if method == .get { //get请求
-            getRequest(url: requestUrl, parmas: parmas, successCallBack: successCallBack, failedCallBack: failedCallBack)
-        }else {
-            postRequest(url: requestUrl, parmas: parmas, successCallBack: successCallBack, failedCallBack: failedCallBack)
+        debugPrint("请求路径为:\(requestUrl)")
+        debugPrint("请求参数为:\(parmas)")
+        
+        
+        AF.request(requestUrl, method: method, parameters: parmas, encoding: URLEncoding.default, headers: nil).responseJSON { response in
+            switch response.result {
+                case .success(let jsonData):
+                    debugPrint(jsonData)
+                    let json = JSON.init(jsonData)
+                    let result:Dictionary<String,JSON> = json["result"].dictionaryValue
+                    successCallBack(result as AnyObject)
+                case .failure(let error):
+                    failedCallBack(error as AnyObject)
+                    debugPrint(error)
+                }
         }
+        
+        
+//        if method == .get { //get请求
+//            getRequest(url: requestUrl, parmas: parmas, successCallBack: successCallBack, failedCallBack: failedCallBack)
+//        }else {
+//            postRequest(url: requestUrl, parmas: parmas, successCallBack: successCallBack, failedCallBack: failedCallBack)
+//        }
         
     }
     
@@ -102,12 +121,13 @@ class NetworkingTool: NSObject {
                             successCallBack:@escaping NetSuccessCallBack, failedCallBack:@escaping NetFailCallBack) {
         AF.request(url, method: .get, parameters: parmas, encoding: URLEncoding.default, headers: nil).responseJSON { response in
             switch response.result {
-            
-            case .success(let jsonData):
-                successCallBack(jsonData as AnyObject)
-            case .failure(let error):
-                failedCallBack(error as AnyObject)
-            }
+                case .success(let jsonData):
+                    successCallBack(jsonData as AnyObject)
+                    debugPrint(jsonData)
+                case .failure(let error):
+                    failedCallBack(error as AnyObject)
+                    debugPrint(error)
+                }
         }
         
     }
@@ -120,7 +140,17 @@ class NetworkingTool: NSObject {
     ///   - successCallBack:      NetSuccessCallBack:成功回调
     ///   - failedCallBack:       NetFailCallBack:失败回调
     public func postRequest(url: String, parmas:[String: Any],
-                            successCallBack: NetSuccessCallBack, failedCallBack: NetFailCallBack) {
+                            successCallBack:@escaping NetSuccessCallBack, failedCallBack:@escaping NetFailCallBack) {
+        AF.request(url, method: .post, parameters: parmas, encoding: URLEncoding.default, headers: nil).responseJSON { response in
+            switch response.result {
+                case .success(let jsonData):
+                    successCallBack(jsonData as AnyObject)
+                    debugPrint(jsonData)
+                case .failure(let error):
+                    failedCallBack(error as AnyObject)
+                    debugPrint(error)
+            }
+        }
         
     }
 

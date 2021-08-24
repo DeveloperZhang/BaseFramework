@@ -8,6 +8,7 @@ target 'BaseFrameWork' do
   # Pods for BaseFrameWork
 
   pod 'Alamofire', '~> 5.4'
+  pod 'SwiftyJSON', '~> 4.0'
 
 
   target 'BaseFrameWorkTests' do
