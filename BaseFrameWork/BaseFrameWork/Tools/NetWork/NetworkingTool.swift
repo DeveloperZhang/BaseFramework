@@ -7,7 +7,7 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
+import HandyJSON
 
 class NetworkingTool: NSObject {
 
@@ -92,9 +92,20 @@ class NetworkingTool: NSObject {
             switch response.result {
                 case .success(let jsonData):
                     debugPrint(jsonData)
-                    let json = JSON.init(jsonData)
-                    let result:Dictionary<String,JSON> = json["result"].dictionaryValue
-                    successCallBack(result as AnyObject)
+                    guard let resultJson = jsonData as? [String:Any] else {
+                        return
+                    }
+                    guard let resultJson = resultJson["result"] as? [String:Any] else {
+                        return
+                    }
+                    print("返回数据为:\(resultJson)")
+                    successCallBack(resultJson as AnyObject)
+                    
+                    
+//                    if let responseModel = JSONDeserializer<HomeViewModel>.deserializeFrom(dict: listJson) {
+//                        print("返回数据为:\(responseModel.toJSONString(prettyPrint: true)!)")
+//                        successCallBack(responseModel as AnyObject)
+//                    }
                 case .failure(let error):
                     failedCallBack(error as AnyObject)
                     debugPrint(error)

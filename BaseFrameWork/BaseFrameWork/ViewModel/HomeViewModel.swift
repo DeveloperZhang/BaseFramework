@@ -6,32 +6,35 @@
 //
 
 import UIKit
-import SwiftyJSON
+import HandyJSON
 
-class HomeViewModel: BaseViewModel {
+
+class HomeViewModel:HandyJSON {
+    var list:[HomeCellModel]?
+    
+    required init(){} // 必须实现一个空的初始化方法
 
 }
 
-class HomeRequestBean:BaseRequestBean,Encodable {
+
+class HomeCellModel:HandyJSON {
+    var id:String?
+    var name:String?
+    var className:String?
+    
+    required init(){} // 必须实现一个空的初始化方法
+    
+    ///实现一个可选的mapping函数，在里边实现NSString值(HandyJSON会把对应的JSON字段转换为NSString)转换为你需要的字段类型
+    public func mapping(mapper: HelpingMapper) {
+        mapper <<<
+            self.className <-- "class_name"
+    }
+}
+
+class HomeRequestBean:BaseRequestBean {
     //页数
     var page: Int?
     //每页显示数量
     var count: Int?
     
-    override func object2JSON() -> JSON {
-        let encoder = JSONEncoder()
-                // 默认 outputFormatting 属性值为 .compact，输出效果如上。如果将其改为 .prettyPrinted 后就能获得更好的阅读体检
-        encoder.outputFormatting = .prettyPrinted
-        var json: JSON = JSON();
-        // 将 Beer 实例转化为 JSON
-        let jsonData2 = try! encoder.encode(self)
-        print(String(bytes: jsonData2, encoding: String.Encoding.utf8) ?? "")
-        do {
-            try json = JSON.init(data: jsonData2)
-            debugPrint(json.dictionaryValue)
-        } catch {
-            debugPrint(error)
-        }
-        return json
-    }
 }

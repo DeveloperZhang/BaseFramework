@@ -7,7 +7,7 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
+import HandyJSON
 
 class HomeTableViewController: UITableViewController {
     
@@ -22,8 +22,8 @@ class HomeTableViewController: UITableViewController {
         requestBean.page = 1
         requestBean.count = 0
     
-        let json =  requestBean.object2JSON()
-        NetworkingTool.shareInstance.request(url: "/baseFramework/students.json", method: .get, parmas: json.dictionaryValue) { result in
+        let json =  requestBean.toJSON()
+        NetworkingTool.shareInstance.request(url:"/baseFramework/students.json", method: .get, parmas: json!) { result in
             debugPrint(result)
         } failedCallBack: { error in
 //            debugPrint(error)

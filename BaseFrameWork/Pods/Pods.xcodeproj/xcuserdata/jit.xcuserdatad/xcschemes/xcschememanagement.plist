@@ -11,28 +11,28 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Pods-BaseFrameWork-BaseFrameWorkUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>Pods-BaseFrameWork.xcscheme</key>
+		<key>HandyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>Pods-BaseFrameWorkTests.xcscheme</key>
+		<key>Pods-BaseFrameWork-BaseFrameWorkUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>SwiftyJSON.xcscheme</key>
+		<key>Pods-BaseFrameWork.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-BaseFrameWorkTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

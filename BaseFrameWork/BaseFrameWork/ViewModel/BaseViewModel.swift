@@ -6,16 +6,12 @@
 //
 
 import UIKit
-import SwiftyJSON
+import HandyJSON
 
 class BaseViewModel: NSObject {
 
 }
 
-class BaseRequestBean: NSObject{
-    
-    //子类的
-    func object2JSON() -> JSON {
-        return JSON()
-    }
+class BaseRequestBean: HandyJSON{
+    required init(){} // 必须实现一个空的初始化方法
 }
