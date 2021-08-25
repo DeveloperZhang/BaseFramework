@@ -23,8 +23,6 @@
 		4489C61F26D38C620069A3DD /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489C61D26D38C620069A3DD /* AccountTableViewController.swift */; };
 		4489C62026D38C620069A3DD /* AccountTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4489C61E26D38C620069A3DD /* AccountTableViewController.xib */; };
 		4489C62326D397920069A3DD /* NetworkingTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489C62226D397920069A3DD /* NetworkingTool.swift */; };
-		449E462126D474450070419D /* NSObject+UnicodeFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449E462026D474450070419D /* NSObject+UnicodeFormat.swift */; };
-		449E462526D4763E0070419D /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 449E462426D4763E0070419D /* LogCategory.m */; };
 		449E463526D4834E0070419D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449E463426D4834E0070419D /* HomeViewModel.swift */; };
 		449E463726D488510070419D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449E463626D488510070419D /* BaseViewModel.swift */; };
 		B0E8B97CB53DD7D7D3E4982E /* Pods_BaseFrameWork_BaseFrameWorkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F21AC56AEFB387990DF5A1A /* Pods_BaseFrameWork_BaseFrameWorkUITests.framework */; };
@@ -69,9 +67,6 @@
 		4489C61D26D38C620069A3DD /* AccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
 		4489C61E26D38C620069A3DD /* AccountTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewController.xib; sourceTree = "<group>"; };
 		4489C62226D397920069A3DD /* NetworkingTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTool.swift; sourceTree = "<group>"; };
-		449E462026D474450070419D /* NSObject+UnicodeFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+UnicodeFormat.swift"; sourceTree = "<group>"; };
-		449E462326D4763E0070419D /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
-		449E462426D4763E0070419D /* LogCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogCategory.m; sourceTree = "<group>"; };
 		449E463026D478180070419D /* BaseFrameWork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BaseFrameWork-Bridging-Header.h"; sourceTree = "<group>"; };
 		449E463426D4834E0070419D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		449E463626D488510070419D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -200,7 +195,6 @@
 		4489C60E26D388710069A3DD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				449E462226D4763E0070419D /* LogCategory */,
 				4489C62126D393D80069A3DD /* NetWork */,
 				4489C61026D38B970069A3DD /* Extension */,
 			);
@@ -211,7 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				4489C61126D38BB90069A3DD /* UIButton+Extension.swift */,
-				449E462026D474450070419D /* NSObject+UnicodeFormat.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -240,15 +233,6 @@
 				4489C62226D397920069A3DD /* NetworkingTool.swift */,
 			);
 			path = NetWork;
-			sourceTree = "<group>";
-		};
-		449E462226D4763E0070419D /* LogCategory */ = {
-			isa = PBXGroup;
-			children = (
-				449E462326D4763E0070419D /* LogCategory.h */,
-				449E462426D4763E0070419D /* LogCategory.m */,
-			);
-			path = LogCategory;
 			sourceTree = "<group>";
 		};
 		ACF781F83A8A4C3E0AEA2F04 /* Pods */ = {
@@ -517,14 +501,12 @@
 				4489C5E026D387960069A3DD /* MainViewController.swift in Sources */,
 				449E463726D488510070419D /* BaseViewModel.swift in Sources */,
 				4489C61226D38BB90069A3DD /* UIButton+Extension.swift in Sources */,
-				449E462126D474450070419D /* NSObject+UnicodeFormat.swift in Sources */,
 				449E463526D4834E0070419D /* HomeViewModel.swift in Sources */,
 				4489C61F26D38C620069A3DD /* AccountTableViewController.swift in Sources */,
 				4489C62326D397920069A3DD /* NetworkingTool.swift in Sources */,
 				4489C5DC26D387960069A3DD /* AppDelegate.swift in Sources */,
 				4489C5DE26D387960069A3DD /* SceneDelegate.swift in Sources */,
 				4489C61B26D38C520069A3DD /* HomeTableViewController.swift in Sources */,
-				449E462526D4763E0070419D /* LogCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
