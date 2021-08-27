@@ -11,7 +11,7 @@ import HandyJSON
 
 class HomeViewModel:BaseViewModel,HandyJSON {
     //请求路径
-    let requestUri = "/baseFramework/students.json"
+    let requestUri = "/baseFramework/students1.json"
     var list:[HomeCellModel]?
     required override init() {
         
@@ -63,6 +63,12 @@ class HomeCellModel:BaseViewModel,HandyJSON {
     var idStr:String?
     var nameString:String?
     var classNameString:String?
+    var contentLbString:String?
+    lazy var rowHeight:CGFloat = {
+        var cell:HomeTableViewCell
+        cell = HomeTableViewCell.createCell()
+        return cell.rowHeight(vm: self)
+    }()
     
     required override init() {
         
@@ -72,7 +78,11 @@ class HomeCellModel:BaseViewModel,HandyJSON {
         idStr = model.id
         nameString = "name:\(model.name ?? "")"
         classNameString = model.className
+        contentLbString = model.content
     }
+    
+
+    
 }
 
 class HomeRequestBean:BaseRequestBean {

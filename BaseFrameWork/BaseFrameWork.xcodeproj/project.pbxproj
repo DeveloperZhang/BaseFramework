@@ -27,6 +27,8 @@
 		449E463726D488510070419D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449E463626D488510070419D /* BaseViewModel.swift */; };
 		44E34E7C26D866DF0029CF03 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E34E7B26D866DF0029CF03 /* BaseModel.swift */; };
 		44E34E7E26D866FD0029CF03 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E34E7D26D866FD0029CF03 /* HomeModel.swift */; };
+		44E34E8126D873A70029CF03 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E34E7F26D873A70029CF03 /* HomeTableViewCell.swift */; };
+		44E34E8226D873A70029CF03 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E34E8026D873A70029CF03 /* HomeTableViewCell.xib */; };
 		B0E8B97CB53DD7D7D3E4982E /* Pods_BaseFrameWork_BaseFrameWorkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F21AC56AEFB387990DF5A1A /* Pods_BaseFrameWork_BaseFrameWorkUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		449E463626D488510070419D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		44E34E7B26D866DF0029CF03 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		44E34E7D26D866FD0029CF03 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		44E34E7F26D873A70029CF03 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		44E34E8026D873A70029CF03 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		6B8AE1232E47F63A1346EFE7 /* Pods-BaseFrameWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseFrameWork.debug.xcconfig"; path = "Target Support Files/Pods-BaseFrameWork/Pods-BaseFrameWork.debug.xcconfig"; sourceTree = "<group>"; };
 		9F21AC56AEFB387990DF5A1A /* Pods_BaseFrameWork_BaseFrameWorkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseFrameWork_BaseFrameWorkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42D56248BB5B268C6165683 /* Pods-BaseFrameWork-BaseFrameWorkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseFrameWork-BaseFrameWorkUITests.release.xcconfig"; path = "Target Support Files/Pods-BaseFrameWork-BaseFrameWorkUITests/Pods-BaseFrameWork-BaseFrameWorkUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 			children = (
 				4489C61926D38C520069A3DD /* HomeTableViewController.swift */,
 				4489C61A26D38C520069A3DD /* HomeTableViewController.xib */,
+				44E34E7F26D873A70029CF03 /* HomeTableViewCell.swift */,
+				44E34E8026D873A70029CF03 /* HomeTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 				4489C61C26D38C520069A3DD /* HomeTableViewController.xib in Resources */,
 				4489C5E826D387970069A3DD /* LaunchScreen.storyboard in Resources */,
 				4489C5E526D387970069A3DD /* Assets.xcassets in Resources */,
+				44E34E8226D873A70029CF03 /* HomeTableViewCell.xib in Resources */,
 				4489C5E326D387960069A3DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +517,7 @@
 				4489C61226D38BB90069A3DD /* UIButton+Extension.swift in Sources */,
 				449E463526D4834E0070419D /* HomeViewModel.swift in Sources */,
 				44E34E7C26D866DF0029CF03 /* BaseModel.swift in Sources */,
+				44E34E8126D873A70029CF03 /* HomeTableViewCell.swift in Sources */,
 				4489C61F26D38C620069A3DD /* AccountTableViewController.swift in Sources */,
 				4489C62326D397920069A3DD /* NetworkingTool.swift in Sources */,
 				4489C5DC26D387960069A3DD /* AppDelegate.swift in Sources */,

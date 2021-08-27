@@ -9,15 +9,16 @@ import UIKit
 import Alamofire
 import HandyJSON
 
+let HomeTableViewCellID = "HomeTableViewCell"
 class HomeTableViewController: UITableViewController {
     
-    let CellID = "CellID"
     var viewModel:HomeViewModel = HomeViewModel()
         
     override func viewDidLoad() {
         print("\(#function) in \(#file)")
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellID)
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellID)
+        tableView.register(UINib.init(nibName: HomeTableViewCellID, bundle: nil), forCellReuseIdentifier: HomeTableViewCellID)
         
         let requestBean = HomeRequestBean()
         requestBean.page = 1
@@ -42,9 +43,14 @@ class HomeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellID, for: indexPath)
-        cell.textLabel?.text = viewModel.list?[indexPath.row].nameString
+        let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCellID, for: indexPath) as! HomeTableViewCell
+        cell.viewModel = viewModel.list?[indexPath.row]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let vm = viewModel.list?[indexPath.row]
+        return vm!.rowHeight
     }
     
     

@@ -19,6 +19,9 @@ class HomeItemModel:HandyJSON {
     var id:String?
     var name:String?
     var className:String?
+    var content:String?
+    
+    
     required init(){} // 必须实现一个空的初始化方法
     
     ///实现一个可选的mapping函数，在里边实现NSString值(HandyJSON会把对应的JSON字段转换为NSString)转换为你需要的字段类型
