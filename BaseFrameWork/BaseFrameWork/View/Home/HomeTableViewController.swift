@@ -12,6 +12,7 @@ import HandyJSON
 class HomeTableViewController: UITableViewController {
     
     let CellID = "CellID"
+    var viewModel:HomeViewModel = HomeViewModel()
         
     override func viewDidLoad() {
         print("\(#function) in \(#file)")
@@ -23,12 +24,12 @@ class HomeTableViewController: UITableViewController {
         requestBean.count = 0
     
         let json =  requestBean.toJSON()
-        NetworkingTool.shareInstance.request(url:"/baseFramework/students.json", method: .get, parmas: json!) { result in
+        viewModel.requestHomeList(params: json!) { result in
             debugPrint(result)
+            self.tableView.reloadData()
         } failedCallBack: { error in
 //            debugPrint(error)
         }
-   
     }
 
     // MARK: - Table view data source
@@ -37,12 +38,12 @@ class HomeTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return viewModel.list?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellID, for: indexPath)
-        cell.textLabel?.text = "\((NSStringFromClass(type(of: self)) as NSString).components(separatedBy: ".").last!)-Cell\(indexPath.row)"
+        cell.textLabel?.text = viewModel.list?[indexPath.row].nameString
         return cell
     }
     

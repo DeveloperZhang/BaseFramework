@@ -9,15 +9,17 @@ import UIKit
 import Alamofire
 import HandyJSON
 
+//成功失败回调
+typealias NetSuccessCallBack = (_ response: AnyObject) -> Void
+typealias NetFailCallBack = (_ error: AnyObject) -> Void
+
 class NetworkingTool: NSObject {
 
     //网络请求路径
     let baseUrlPath = "http://localhost:8080"
     let basePicPath = ""
     let baseH5Path = ""
-    //成功失败回调
-    typealias NetSuccessCallBack = (_ response: AnyObject) -> Void
-    typealias NetFailCallBack = (_ error: AnyObject) -> Void
+
     //枚举类型
     enum NetRequestMethod: String {
         case get = "get"

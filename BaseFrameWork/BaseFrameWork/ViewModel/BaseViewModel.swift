@@ -9,7 +9,7 @@ import UIKit
 import HandyJSON
 
 class BaseViewModel: NSObject {
-
+    var isNetSuccess:Bool?
 }
 
 class BaseRequestBean: HandyJSON{

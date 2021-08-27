@@ -9,25 +9,69 @@ import UIKit
 import HandyJSON
 
 
-class HomeViewModel:HandyJSON {
+class HomeViewModel:BaseViewModel,HandyJSON {
+    //请求路径
+    let requestUri = "/baseFramework/students.json"
     var list:[HomeCellModel]?
-    
-    required init(){} // 必须实现一个空的初始化方法
+    required override init() {
+        
+    }
+}
 
+extension HomeViewModel {
+    
+    public func requestHomeList(params:[String:Any], successCallBack:@escaping NetSuccessCallBack, failedCallBack:@escaping NetFailCallBack) {
+        NetworkingTool.shareInstance.request(url:requestUri, method: .get, parmas: params) { result in
+            debugPrint(result)
+            self.paraseResult(resultJson: result as! [String : Any]) { result in
+                successCallBack(result)
+            }  failedCallBack: { error in
+                failedCallBack(error)
+            }
+        } failedCallBack: { error in
+            debugPrint(error)
+            failedCallBack(error)
+        }
+    }
+    
+    public func paraseResult(resultJson:[String:Any], successCallBack:@escaping NetSuccessCallBack, failedCallBack:@escaping NetFailCallBack) {
+        if let responseModel = JSONDeserializer<HomeModel>.deserializeFrom(dict: resultJson) {
+            print("返回数据为:\(responseModel.toJSONString(prettyPrint: true)!)")
+            self.parseModelToVM(model: responseModel)
+            print("ViewModel的返回数据为:\(self.toJSONString(prettyPrint: true)!)")
+            successCallBack(self)
+        }else {
+            let error = NSError.init(domain: "paraseResultError", code: -110, userInfo: [:])
+            failedCallBack(error)
+        }
+    }
+    
+    
+    public func parseModelToVM(model:HomeModel) {
+        self.list = []
+        for itemModel in model.list! {
+            let cellVM = HomeCellModel()
+            cellVM.parseModelToVM(model: itemModel)
+            self.list?.append(cellVM)
+        }
+        self.isNetSuccess = true
+    }
 }
 
 
-class HomeCellModel:HandyJSON {
-    var id:String?
-    var name:String?
-    var className:String?
+class HomeCellModel:BaseViewModel,HandyJSON {
+    var idStr:String?
+    var nameString:String?
+    var classNameString:String?
     
-    required init(){} // 必须实现一个空的初始化方法
+    required override init() {
+        
+    }
     
-    ///实现一个可选的mapping函数，在里边实现NSString值(HandyJSON会把对应的JSON字段转换为NSString)转换为你需要的字段类型
-    public func mapping(mapper: HelpingMapper) {
-        mapper <<<
-            self.className <-- "class_name"
+    public func parseModelToVM(model:HomeItemModel) {
+        idStr = model.id
+        nameString = "name:\(model.name ?? "")"
+        classNameString = model.className
     }
 }
 

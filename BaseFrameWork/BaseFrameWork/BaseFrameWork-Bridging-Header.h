@@ -10,5 +10,3 @@
 
 
 #endif /* BaseFrameWork_Bridging_Header_h */
-
-#import "LogCategory.h"
