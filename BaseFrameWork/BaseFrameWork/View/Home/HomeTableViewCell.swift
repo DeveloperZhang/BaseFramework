@@ -9,6 +9,8 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
     
+    let cPadding:CGFloat = 20.0
+    
     @IBOutlet weak var titleLb: UILabel!
     @IBOutlet weak var contentLb: UILabel!
     
@@ -33,9 +35,9 @@ class HomeTableViewCell: UITableViewCell {
     func rowHeight(vm: HomeCellModel) -> CGFloat {
         viewModel = vm
         contentView.layoutIfNeeded()
-        var height = contentLb.frame.maxY + 20
+        var height = contentLb.frame.maxY + cPadding
         if viewModel?.contentLbString == "" {
-            height = titleLb.frame.maxY + 20
+            height = titleLb.frame.maxY + cPadding
         }
         return height
     }

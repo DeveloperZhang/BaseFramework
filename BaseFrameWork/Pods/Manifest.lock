@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.4.3)
   - HandyJSON (5.0.2)
+  - ProgressHUD (13.6)
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
   - HandyJSON (~> 5.0.2)
+  - ProgressHUD
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - HandyJSON
+    - ProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
 
-PODFILE CHECKSUM: b32557a4998fb1e401f76ba0b96cb87a64be2b8c
+PODFILE CHECKSUM: 31f514429f70c7f4453b8df7ae3fd9cd08419d82
 
 COCOAPODS: 1.10.1
