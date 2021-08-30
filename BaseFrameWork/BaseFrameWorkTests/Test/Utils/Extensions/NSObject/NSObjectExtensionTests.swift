@@ -1,16 +1,13 @@
 //
-//  BaseFrameWorkTests.swift
+//  NSObjectExtensionTests.swift
 //  BaseFrameWorkTests
 //
-//  Created by ZhangYu on 2021/8/23.
+//  Created by ZhangYu on 2021/8/30.
 //
 
 import XCTest
-@testable import BaseFrameWork
 
-class BaseFrameWorkTests: XCTestCase {
-    var viewModel:HomeViewModel = HomeViewModel()
-
+class NSObjectExtensionTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,21 +17,6 @@ class BaseFrameWorkTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    
-    func testNet() {
-        let networkExpection = expectation(description: "networkDownSuccess")
-        viewModel.requestHomeList(params:[:]) { result in
-            debugPrint(result)
-            networkExpection.fulfill()
-        } failedCallBack: { error in
-//            debugPrint(error)
-        }
-        let result = XCTWaiter(delegate: self).wait(for: [networkExpection], timeout:  10)
-            if result == .timedOut {
-                print("超时")
-        }
-    }
-    
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -45,6 +27,24 @@ class BaseFrameWorkTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+
+}
+
+class User1: NSObject {
+    
+}
+
+
+// MARK: - Misc
+
+extension NSObjectExtensionTests {
+
+    func testClassName() {
+        let user = User1()
+        XCTAssertEqual(user.className, "User1")
+        XCTAssertEqual(User1.className, "User1")
+        print("user.className is :" + user.className + ConsoleDebugPrefix)
     }
 
 }
