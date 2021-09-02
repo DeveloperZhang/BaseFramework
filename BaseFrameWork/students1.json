@@ -1,0 +1,23 @@
+{
+	"result": {
+		"list": [{
+				"id": "1",
+				"name": "张三",
+				"class_name": "一年一班",
+				"content": "我是content我是content我是content我是content我是content我是content我是content"
+			},
+			{
+				"id": "2",
+				"name": "李四",
+				"class_name": "一年二班",
+				"content": "我是content我是content"
+			},
+			{
+				"id": "3",
+				"name": "王老五",
+				"class_name": "一年三班",
+				"content": ""
+			}
+		]
+	}
+}
