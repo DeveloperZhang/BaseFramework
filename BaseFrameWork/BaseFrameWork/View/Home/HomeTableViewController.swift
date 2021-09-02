@@ -27,7 +27,7 @@ class HomeTableViewController: UITableViewController {
     
         
         let json =  requestBean.toJSON()
-        ProgressHUD.show()
+//        ProgressHUD.show()
         viewModel.requestHomeList(params: json!) { result in
             debugPrint(result)
             self.tableView.reloadData()

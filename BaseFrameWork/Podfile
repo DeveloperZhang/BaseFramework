@@ -10,6 +10,8 @@ target 'BaseFrameWork' do
   pod 'Alamofire', '~> 5.4'
   pod 'HandyJSON', '~> 5.0.2'
   pod 'ProgressHUD'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   target 'BaseFrameWorkTests' do
     inherit! :search_paths

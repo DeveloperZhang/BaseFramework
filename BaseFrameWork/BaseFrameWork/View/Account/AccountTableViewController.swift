@@ -10,7 +10,6 @@ import UIKit
 class AccountTableViewController: UITableViewController {
         
     let CellID = "CellID"
-        
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellID)

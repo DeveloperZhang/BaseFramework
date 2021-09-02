@@ -28,6 +28,7 @@ class MainViewController: UITabBarController {
 extension MainViewController {
     private func addChildViewControllers() {
         tabBar.tintColor =  UIColor.orange
+        addChildViewController(vc: TestTableViewController(), title: "测试", imageName: "tabbar_profile")
         addChildViewController(vc: HomeTableViewController(), title: "首页", imageName: "tabbar_home")
         addChildViewController(vc: AccountTableViewController(), title: "我", imageName: "tabbar_profile")
     }
