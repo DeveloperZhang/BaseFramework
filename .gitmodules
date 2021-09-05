@@ -1,0 +1,6 @@
+[submodule "Carthage/Checkouts/Alamofire"]
+	path = BaseFrameWork/Carthage/Checkouts/Alamofire
+	url = https://gitee.com/insyangming/Alamofire.git
+[submodule "Carthage/Checkouts/HandyJSON"]
+	path = BaseFrameWork/Carthage/Checkouts/HandyJSON
+	url = https://gitee.com/xianhengcode/HandyJSON.git
