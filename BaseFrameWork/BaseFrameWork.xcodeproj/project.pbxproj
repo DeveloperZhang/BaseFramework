@@ -43,7 +43,6 @@
 		4481ABAC26DF0E3B00DBE9EC /* SimpleRxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4481ABAA26DF0E3B00DBE9EC /* SimpleRxViewController.swift */; };
 		4481ABAD26DF0E3B00DBE9EC /* SimpleRxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4481ABAB26DF0E3B00DBE9EC /* SimpleRxViewController.xib */; };
 		4489C5DC26D387960069A3DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489C5DB26D387960069A3DD /* AppDelegate.swift */; };
-		4489C5DE26D387960069A3DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489C5DD26D387960069A3DD /* SceneDelegate.swift */; };
 		4489C5E026D387960069A3DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489C5DF26D387960069A3DD /* MainViewController.swift */; };
 		4489C5E326D387960069A3DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4489C5E126D387960069A3DD /* Main.storyboard */; };
 		4489C5E526D387970069A3DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4489C5E426D387970069A3DD /* Assets.xcassets */; };
@@ -124,7 +123,6 @@
 		4481ABAB26DF0E3B00DBE9EC /* SimpleRxViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleRxViewController.xib; sourceTree = "<group>"; };
 		4489C5D826D387960069A3DD /* BaseFrameWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseFrameWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4489C5DB26D387960069A3DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4489C5DD26D387960069A3DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4489C5DF26D387960069A3DD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4489C5E226D387960069A3DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4489C5E426D387970069A3DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -502,7 +500,6 @@
 				4489C60C26D388610069A3DD /* ViewModel */,
 				4489C60B26D388590069A3DD /* View */,
 				4489C5DB26D387960069A3DD /* AppDelegate.swift */,
-				4489C5DD26D387960069A3DD /* SceneDelegate.swift */,
 				4489C5E126D387960069A3DD /* Main.storyboard */,
 				4489C5E426D387970069A3DD /* Assets.xcassets */,
 				4489C5E626D387970069A3DD /* LaunchScreen.storyboard */,
@@ -957,7 +954,6 @@
 				4489C62326D397920069A3DD /* NetworkingTool.swift in Sources */,
 				441DC68D26DC7671005E234B /* FileManagerExtension.swift in Sources */,
 				4489C5DC26D387960069A3DD /* AppDelegate.swift in Sources */,
-				4489C5DE26D387960069A3DD /* SceneDelegate.swift in Sources */,
 				4489C61B26D38C520069A3DD /* HomeTableViewController.swift in Sources */,
 				441DC66326DC5C9A005E234B /* Injectable.swift in Sources */,
 				44C0FA2026DE26FE0023E7FA /* ArrayExtension.swift in Sources */,
@@ -1086,7 +1082,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1142,7 +1138,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

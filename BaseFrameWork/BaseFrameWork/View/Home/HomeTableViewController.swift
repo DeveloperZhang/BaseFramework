@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 import HandyJSON
-import ProgressHUD
+//import ProgressHUD
 
 let HomeTableViewCellID = "HomeTableViewCell"
 class HomeTableViewController: UITableViewController {
@@ -31,7 +31,7 @@ class HomeTableViewController: UITableViewController {
         viewModel.requestHomeList(params: json!) { result in
             debugPrint(result)
             self.tableView.reloadData()
-            ProgressHUD.dismiss()
+//            ProgressHUD.dismiss()
         } failedCallBack: { error in
 //            debugPrint(error)
         }
