@@ -69,6 +69,13 @@
 		75A4B56A0D0791968CD69F6F /* Pods_BaseFrameWorkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44F500037BC2FE9AE903A07 /* Pods_BaseFrameWorkTests.framework */; };
 		78E18D2781FAB5F6F0C74036 /* Pods_BaseFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC2511CBCA6B0A4BB485A77 /* Pods_BaseFrameWork.framework */; };
 		DEE71E61508CDEFAF7101530 /* Pods_BaseFrameWork_BaseFrameWorkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24203721769E633ECAAB60FD /* Pods_BaseFrameWork_BaseFrameWorkUITests.framework */; };
+		E859D95C26E9ADDE00E3F21E /* SimpleRxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859D95A26E9ADDE00E3F21E /* SimpleRxTableViewController.swift */; };
+		E859D95D26E9ADDE00E3F21E /* SimpleRxTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E859D95B26E9ADDE00E3F21E /* SimpleRxTableViewController.xib */; };
+		E8ABC36526E9CFDB00BBFF5E /* RxTestBinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ABC36326E9CFDB00BBFF5E /* RxTestBinderViewController.swift */; };
+		E8ABC36626E9CFDB00BBFF5E /* RxTestBinderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8ABC36426E9CFDB00BBFF5E /* RxTestBinderViewController.xib */; };
+		E8ABC36926E9FFA300BBFF5E /* RxSwiftBothwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ABC36726E9FFA300BBFF5E /* RxSwiftBothwayViewController.swift */; };
+		E8ABC36A26E9FFA300BBFF5E /* RxSwiftBothwayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8ABC36826E9FFA300BBFF5E /* RxSwiftBothwayViewController.xib */; };
+		E8ABC36C26EA01FC00BBFF5E /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ABC36B26EA01FC00BBFF5E /* Operators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +168,13 @@
 		B44F500037BC2FE9AE903A07 /* Pods_BaseFrameWorkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseFrameWorkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC89B0350951B0A46F783EAB /* Pods-BaseFrameWorkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseFrameWorkTests.release.xcconfig"; path = "Target Support Files/Pods-BaseFrameWorkTests/Pods-BaseFrameWorkTests.release.xcconfig"; sourceTree = "<group>"; };
 		DD8BCC3CDCA9233632A20839 /* Pods-BaseFrameWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseFrameWork.debug.xcconfig"; path = "Target Support Files/Pods-BaseFrameWork/Pods-BaseFrameWork.debug.xcconfig"; sourceTree = "<group>"; };
+		E859D95A26E9ADDE00E3F21E /* SimpleRxTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRxTableViewController.swift; sourceTree = "<group>"; };
+		E859D95B26E9ADDE00E3F21E /* SimpleRxTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleRxTableViewController.xib; sourceTree = "<group>"; };
+		E8ABC36326E9CFDB00BBFF5E /* RxTestBinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTestBinderViewController.swift; sourceTree = "<group>"; };
+		E8ABC36426E9CFDB00BBFF5E /* RxTestBinderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxTestBinderViewController.xib; sourceTree = "<group>"; };
+		E8ABC36726E9FFA300BBFF5E /* RxSwiftBothwayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftBothwayViewController.swift; sourceTree = "<group>"; };
+		E8ABC36826E9FFA300BBFF5E /* RxSwiftBothwayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSwiftBothwayViewController.xib; sourceTree = "<group>"; };
+		E8ABC36B26EA01FC00BBFF5E /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		E8FE2F4E26E5047000E216BD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		E8FE2F5126E5065600E216BD /* HandyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyJSON.framework; path = Carthage/Build/iOS/HandyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -466,8 +480,15 @@
 		4481ABA926DF0E1E00DBE9EC /* RxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				E8ABC36B26EA01FC00BBFF5E /* Operators.swift */,
 				4481ABAA26DF0E3B00DBE9EC /* SimpleRxViewController.swift */,
 				4481ABAB26DF0E3B00DBE9EC /* SimpleRxViewController.xib */,
+				E859D95A26E9ADDE00E3F21E /* SimpleRxTableViewController.swift */,
+				E859D95B26E9ADDE00E3F21E /* SimpleRxTableViewController.xib */,
+				E8ABC36326E9CFDB00BBFF5E /* RxTestBinderViewController.swift */,
+				E8ABC36426E9CFDB00BBFF5E /* RxTestBinderViewController.xib */,
+				E8ABC36726E9FFA300BBFF5E /* RxSwiftBothwayViewController.swift */,
+				E8ABC36826E9FFA300BBFF5E /* RxSwiftBothwayViewController.xib */,
 			);
 			path = RxSwift;
 			sourceTree = "<group>";
@@ -803,9 +824,12 @@
 				4481ABAD26DF0E3B00DBE9EC /* SimpleRxViewController.xib in Resources */,
 				4481ABA826DF0BCB00DBE9EC /* TestTableViewController.xib in Resources */,
 				4489C5E826D387970069A3DD /* LaunchScreen.storyboard in Resources */,
+				E8ABC36A26E9FFA300BBFF5E /* RxSwiftBothwayViewController.xib in Resources */,
 				4489C5E526D387970069A3DD /* Assets.xcassets in Resources */,
 				44E34E8226D873A70029CF03 /* HomeTableViewCell.xib in Resources */,
 				4489C5E326D387960069A3DD /* Main.storyboard in Resources */,
+				E8ABC36626E9CFDB00BBFF5E /* RxTestBinderViewController.xib in Resources */,
+				E859D95D26E9ADDE00E3F21E /* SimpleRxTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -971,15 +995,19 @@
 				441DC67926DC6A96005E234B /* BundleExtension.swift in Sources */,
 				4489C61226D38BB90069A3DD /* UIButton+Extension.swift in Sources */,
 				44C0E5CB26DC9E37001B0FC9 /* UserDefaultsExtension.swift in Sources */,
+				E8ABC36926E9FFA300BBFF5E /* RxSwiftBothwayViewController.swift in Sources */,
 				441DC65926DC5B26005E234B /* AnyOptional.swift in Sources */,
 				449E463526D4834E0070419D /* HomeViewModel.swift in Sources */,
 				441DC6A926DC7FD4005E234B /* DoubleExtension.swift in Sources */,
 				441DC66826DC5FB2005E234B /* InjectableTestModel.swift in Sources */,
+				E8ABC36C26EA01FC00BBFF5E /* Operators.swift in Sources */,
 				44E34E7C26D866DF0029CF03 /* BaseModel.swift in Sources */,
 				44E34E8126D873A70029CF03 /* HomeTableViewCell.swift in Sources */,
+				E8ABC36526E9CFDB00BBFF5E /* RxTestBinderViewController.swift in Sources */,
 				441DC67026DC67A2005E234B /* Then.swift in Sources */,
 				4489C61F26D38C620069A3DD /* AccountTableViewController.swift in Sources */,
 				441DC6AD26DC80E2005E234B /* URLExtension.swift in Sources */,
+				E859D95C26E9ADDE00E3F21E /* SimpleRxTableViewController.swift in Sources */,
 				441DC69C26DC7BCB005E234B /* NSRangeExtension.swift in Sources */,
 				4489C62326D397920069A3DD /* NetworkingTool.swift in Sources */,
 				441DC68D26DC7671005E234B /* FileManagerExtension.swift in Sources */,
